@@ -1,0 +1,25 @@
+#circle {
+    width: 350px;
+    height: 350px;
+    background: #000;
+    border-radius: 267px;
+    margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+
+.arrow-down {
+	width: 150px;
+    height: 173px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 97px solid purple;
+    margin: -200px 25px 12px 542px;
+}
+}
+

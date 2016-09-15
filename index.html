@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Magic 8 Ball</title>
+	<link rel="stylesheet" href="8_ball.css">
+</head>
+<body>
+
+<h1> Magic 8 Ball </h1>
+
+<div id ="circle"></div>
+
+<div class="arrow-down"></div>
+
+Please type a yes or no question<br>
+  <input type="text" id="question">
+
+<button id ="ask"> Ask your question </button>
+
+
+
+
+
+
+<script>
+var answersArray = ["No", "Yes", "Definitely No", "Definitely Yes", "Don't count on it", "Absolutely", "Please try again", ];
+var shuffleAnswers = function(){
+	for(var i = 0; i < answersArray.length; i ++);
+		var random = Math.floor(Math.random(answersArray) * i);
+	answersArray.appendChild("arrow-down");
+};
+
+var question = document.getElementById("question").value;
+
+var ask = document.getElementById("ask");
+
+ask.addEventListener("click",shuffleAnswers);
+
+
+
+
+
+</script>
+	
+</body>
+</html>
