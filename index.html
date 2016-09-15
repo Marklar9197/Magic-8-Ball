@@ -20,32 +20,21 @@
 
 <p> Please type a yes or no question</p>
 <form>
-<input id="question" type="text"><br>
-<input type="submit" value="Submit form">
+<input type="text">
+<input id="question" type="submit" value="Submit">
 </form>
 
 
-
-
-
-
-
 <script>
+// Create an array that contains the different answers the magic 8 ball can give you
 var answersArray = ["No", "Yes", "Definitely No", "Definitely Yes", "Don't count on it", "Absolutely", "Please try again", ];
+//Create a function that will randomly select an answer once the submit button is clicked
 var shuffleAnswers = function(){
-	for(var i = 0; i < answersArray.length; i ++);
+	for(var i = 0; i < answersArray.length; i ++);{
 		var random = Math.floor(Math.random(answersArray) * i);
-	answersArray.appendChild("arrow-down");
+		answersArray.appendChild("arrow-down");
+	}
 };
-
-var question = document.getElementById("question").value;
-
-
-
-ask.addEventListener("click",shuffleAnswers).hide("#question");
-
-
-
 
 
 </script>
