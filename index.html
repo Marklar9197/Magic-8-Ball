@@ -5,6 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Magic 8 Ball</title>
 	<link rel="stylesheet" href="8_ball.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 </head>
 <body>
 
@@ -14,10 +16,14 @@
 
 <div class="arrow-down"></div>
 
-Please type a yes or no question<br>
-  <input type="text" id="question">
 
-<button id ="ask"> Ask your question </button>
+
+<p> Please type a yes or no question</p>
+<form>
+<input id="question" type="text"><br>
+<input type="submit" value="Submit form">
+</form>
+
 
 
 
@@ -34,9 +40,9 @@ var shuffleAnswers = function(){
 
 var question = document.getElementById("question").value;
 
-var ask = document.getElementById("ask");
 
-ask.addEventListener("click",shuffleAnswers);
+
+ask.addEventListener("click",shuffleAnswers).hide("#question");
 
 
 
