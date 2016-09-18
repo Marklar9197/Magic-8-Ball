@@ -21,28 +21,28 @@
 <p> Please type a yes or no question</p>
 <form>
 <input type="text">
-<input id="question" type="submit" value="Submit">
+<input id="question" type="submit" value="Submit" onclick="shufflAnswers()">
 </form>
 
 
 <script>
+
+'use strict';
 // Create an array that contains the different answers the magic 8 ball can give you
-var answersArray = ["No", "Yes", "Definitely No", "Definitely Yes", "Don't count on it", "Absolutely", "Please try again", ];
-
-var question = document.getElementById("#question");
+var answersArray = ["No", "Yes", "Definitely No", "Definitely Yes", "Don't count on it", "Absolutely", "Please try again"];
 //Create a function that will randomly select an answer once the submit button is clicked 
-var shuffleAnswers = function(){
-
-	for(var i = 0; i <=answersArray.length; i ++);{
-	}
+function shuffleAnswers(){
+	var shuffle = document.getElementById("question").innerHTML = answersArray[Math.floor(Math.random() * answersArray.length)];
 };
+
 
 //Create a function to shake the 8 ball
 	$(document).ready(function(){
 	$("#question").click(function(){
-	$("#circle").effect("shake", {times:5},{distance:20} {direction:"right"} 5000);	
-		});		
-	});
+	$("#circle").effect("shake", {times:3}, {direction:"right"} 2000);
+	});		
+		});
+
 
 // question.addEventListener("click", shuffleAnswers);
 
