@@ -33,17 +33,16 @@ var question = document.getElementById("#question");
 //Create a function that will randomly select an answer once the submit button is clicked 
 var shuffleAnswers = function(){
 
-	for(var i = 0; i < answersArray.length; i ++);{
-		document.createElement("span").textContent(shuffleAnswers).appendChild("#arrow-down");
+	for(var i = 0; i <=answersArray.length; i ++);{
 	}
 };
 
 //Create a function to shake the 8 ball
 	$(document).ready(function(){
 	$("#question").click(function(){
-	$("#circle").effect("shake", {times:3}, 1000);	
-		})		
-	})
+	$("#circle").effect("shake", {times:5},{distance:20} {direction:"right"} 5000);	
+		});		
+	});
 
 // question.addEventListener("click", shuffleAnswers);
 
