@@ -13,7 +13,7 @@ h1 {
 
 
 
-.arrow-down {
+#arrow-down {
 	width: 150px;
     height: 173px;
     border-left: 20px solid transparent;
@@ -21,5 +21,5 @@ h1 {
     border-top: 97px solid purple;
     margin: -200px 25px 12px 542px;
 }
-}
+
 

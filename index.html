@@ -24,41 +24,29 @@
 <input id="question" type="submit" value="Submit">
 </form>
 
-$("#button").click(function(){
-               $(".target").effect( "shake", {times:4}, 1000 );
-            });
 
 <script>
 // Create an array that contains the different answers the magic 8 ball can give you
 var answersArray = ["No", "Yes", "Definitely No", "Definitely Yes", "Don't count on it", "Absolutely", "Please try again", ];
 
-var arrow = document.getElementById("arrow-down");
-//Create a function that will randomly select an answer once the submit button is clicked as well make the magic 8 ball shake
+var question = document.getElementById("#question");
+//Create a function that will randomly select an answer once the submit button is clicked 
 var shuffleAnswers = function(){
+
+	for(var i = 0; i < answersArray.length; i ++);{
+		document.createElement("span").textContent(shuffleAnswers).appendChild("#arrow-down");
+	}
+};
+
+//Create a function to shake the 8 ball
 	$(document).ready(function(){
 	$("#question").click(function(){
 	$("#circle").effect("shake", {times:3}, 1000);	
 		})		
 	})
-	for(var i = 0; i < answersArray.length; i ++);{
-		document.createElement("span").textContent("")
-	}
-};
 
+// question.addEventListener("click", shuffleAnswers);
 
-
-
-
-
-$(document).ready(function(){
-$("#question").click(function(){
-$("#circle").animate({
-        'margin-left': '-=5px',
-        'margin-right': '+=5px'
-    })
-
-	});
-});
 
 </script>
 	
