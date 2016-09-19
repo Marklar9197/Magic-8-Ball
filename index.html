@@ -6,45 +6,53 @@
 	<title>Magic 8 Ball</title>
 	<link rel="stylesheet" href="8_ball.css">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type = "text/javascript" 
+    src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
 
 </head>
 <body>
 
 <h1> Magic 8 Ball </h1>
 
-<div id ="circle"></div>
+<div id ="circle">
 
 <div id="arrow-down"></div>
+
+</div>
 
 
 
 <p> Please type a yes or no question</p>
-<form>
-<input type="text">
-<input id="question" type="submit" value="Submit" onclick="shufflAnswers()">
-</form>
+<textarea> </textarea>
+
+<button id ="question">Submit </button>
+
+
 
 
 <script>
 
-'use strict';
-// Create an array that contains the different answers the magic 8 ball can give you
-var answersArray = ["No", "Yes", "Definitely No", "Definitely Yes", "Don't count on it", "Absolutely", "Please try again"];
-//Create a function that will randomly select an answer once the submit button is clicked 
+$(document).ready(function(){
+	$("#arrow-down").hide();
+	$('#question').click(function(){
+	$("#circle").effect("shake", {times:3}, {direction:"right"}, 4000)
+	$("#arrow-down").fadeIn(3000);
+	$('#arrow-down').html('<p>' + shuffleAnswers()  + '<p>');
+
+	});
+
+});
+
 function shuffleAnswers(){
-	var shuffle = document.getElementById("arrow-down").innerHTML = answersArray[Math.floor(Math.random() * answersArray.length)];
-};
+	var unrounded = Math.random() * answersArray.length;
+	var subscript = Math.floor(unrounded);
+
+return answersArray[subscript];
+}
+
+var answersArray = ["No", "Yes", "Definitely No", "Definitely Yes", "Don't count on it", "Absolutely", "Please try again","You're dreaming", "Concentrate and ask again", "You're kidding right?"];
 
 
-//Create a function to shake the 8 ball
-	$(document).ready(function(){
-	$("#question").click(function(){
-	$("#circle").effect("shake", {times:3}, {direction:"right"} 2000);
-	});		
-		});
-
-
-// question.addEventListener("click", shuffleAnswers);
 
 
 </script>

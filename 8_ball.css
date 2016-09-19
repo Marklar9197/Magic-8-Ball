@@ -2,8 +2,9 @@
     width: 350px;
     height: 350px;
     background: #000;
-    border-radius: 267px;
+    border-radius: 100%;
     margin: 0 auto;
+    position:relative;
 }
 
 h1 {
@@ -14,12 +15,37 @@ h1 {
 
 
 #arrow-down {
-	width: 150px;
-    height: 173px;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 97px solid purple;
-    margin: -200px 25px 12px 542px;
+    color: #000;
+    width: 0;
+    height: 0;
+    left:50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-left: 136px solid transparent;
+    border-right: 136px solid transparent;
+    border-top: 192px solid indigo;
+
 }
+
+#arrow-down p {
+    color: #fff;
+    height: 137px;
+    width: 101px;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -116px;
+    font-size:30px;
+}
+
+#question {
+    cursor: pointer;
+}
+
+
 
 
