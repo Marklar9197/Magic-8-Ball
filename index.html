@@ -23,7 +23,7 @@
 
 
 <p> Please type a yes or no question</p>
-<textarea> </textarea>
+<textarea id="text"></textarea>
 
 <button id ="question">Submit </button>
 
@@ -32,6 +32,19 @@
 
 <script>
 
+var whiteSpace = document.getElementById("text").value();
+
+if (whiteSpace === "") {
+	alert("Please enter a yes or no question");
+}
+
+
+
+//  This creates a list of all the possible answers the 8 ball can give you. 
+var answersArray = ["No", "Yes", "Definitely No", "Definitely Yes", "Don't count on it", "Absolutely", "Please try again","You're dreaming", "Concentrate and ask again", "You're kidding right?"];
+
+
+// This function hides the arrow when the page loads. Once the submit button is clicked, FIRST it will trigger the click function that makes the 8 ball shake and THEN the arroe will fadein. After that a RANDOM message from the answers array will appear.
 $(document).ready(function(){
 	$("#arrow-down").hide();
 	$('#question').click(function(){
@@ -43,15 +56,13 @@ $(document).ready(function(){
 
 });
 
+// This function will shuffle the answersarray and then reuturn a random value
 function shuffleAnswers(){
 	var unrounded = Math.random() * answersArray.length;
 	var subscript = Math.floor(unrounded);
 
 return answersArray[subscript];
 }
-
-var answersArray = ["No", "Yes", "Definitely No", "Definitely Yes", "Don't count on it", "Absolutely", "Please try again","You're dreaming", "Concentrate and ask again", "You're kidding right?"];
-
 
 
 
