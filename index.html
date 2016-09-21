@@ -40,11 +40,9 @@ var answersArray = ["No", "Yes", "Don't count on it", "Please concentrate and tr
 
 // This function hides the arrow when the page loads. Once the submit button is clicked, FIRST it will trigger the click function that makes the 8 ball shake and THEN the arroe will fadein. After that a RANDOM message from the answers array will appear.
 $(document).ready(function(){
-	$("#arrow-down").hide();
 	$('#question').click(function(){
-	$("#number").fadeOut(2000);
+	$("#number").fadeOut(8000);
 	$("#circle").effect("shake", {times:3}, {direction:"right"}, 3000)
-	// $("#arrow-down").fadeIn(3000);
 	$('#circle').fadeIn(3000).html('<p>' + shuffleAnswers()  + '<p>');
 
 	});
