@@ -1,3 +1,7 @@
+body {
+   background:url('http://i.giphy.com/k8D9UcOEgP00o.gif');
+}
+
 #circle {
     width: 350px;
     height: 350px;
@@ -39,7 +43,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: -116px;
-    font-size:30px;
+    font-size:39px;
 }
 
 #question {
