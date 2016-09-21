@@ -16,28 +16,22 @@
 
 <div id ="circle">
 
-<div id="arrow-down"></div>
+	<div id="white">
+
+		<div id="number">8</div>
+
+	</div>
 
 </div>
 
 
+<p id="yn"> Please type a yes or no question</p>
 
-<p> Please type a yes or no question</p>
 <textarea id="text"></textarea>
 
 <button id ="question">Submit </button>
 
-<div id="number">8</div>
-
-
 <script>
-
-// var whiteSpace = document.getElementById("text")
-
-// if (whiteSpace.value === "") {
-// 	alert("Please enter a yes or no question");
-// }
-
 
 
 //  This creates a list of all the possible answers the 8 ball can give you. 
@@ -48,10 +42,10 @@ var answersArray = ["No", "Yes", "Don't count on it", "Please try again","You're
 $(document).ready(function(){
 	$("#arrow-down").hide();
 	$('#question').click(function(){
-	$("#number").fadeOut(2000);
-	$("#circle").effect("shake", {times:3}, {direction:"right"}, 4000)
-	$("#arrow-down").fadeIn(3000);
-	$('#arrow-down').html('<p>' + shuffleAnswers()  + '<p>');
+	$("#number").fadeOut(4000);
+	$("#circle").effect("shake", {times:7}, {direction:"right"}, 8000)
+	// $("#arrow-down").fadeIn(3000);
+	$('#circle').html('<p>' + shuffleAnswers()  + '<p>');
 
 	});
 
@@ -64,8 +58,6 @@ function shuffleAnswers(){
 
 return answersArray[subscript];
 }
-
-
 
 </script>
 	
