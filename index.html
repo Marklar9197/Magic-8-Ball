@@ -46,11 +46,9 @@ var answersArray = ["No", "Yes", "Don't count on it", "Please concentrate and tr
 // This function hides the arrow when the page loads. Once the submit button is clicked, FIRST it will trigger the click function that makes the 8 ball shake and THEN the arroe will fadein. After that a RANDOM message from the answers array will appear.
 var text = document.getElementById("text");
 
-if(text === text.trim()){
-	alert("Please type a yes or no question")
+if(text==="") {
+	alert("please type a yes or no question")
 }
-
-else{
 
 $(document).ready(function(){
 	$('#question').click(function(){
@@ -62,7 +60,7 @@ $(document).ready(function(){
 
 });
 
-}
+
 
 // This function will shuffle the answersarray and then reuturn a random value
 function shuffleAnswers(){
